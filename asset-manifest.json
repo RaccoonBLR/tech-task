@@ -1,15 +1,21 @@
 {
   "files": {
     "main.css": "/twtr-tech-task/static/css/main.a0acc54f.css",
-    "main.js": "/twtr-tech-task/static/js/main.8f8ee457.js",
+    "main.js": "/twtr-tech-task/static/js/main.c5e7b203.js",
+    "static/js/415.05a0abbe.chunk.js": "/twtr-tech-task/static/js/415.05a0abbe.chunk.js",
+    "static/js/42.20ca9d33.chunk.js": "/twtr-tech-task/static/js/42.20ca9d33.chunk.js",
+    "static/js/384.39d5b8e3.chunk.js": "/twtr-tech-task/static/js/384.39d5b8e3.chunk.js",
     "static/media/cardBg.png": "/twtr-tech-task/static/media/cardBg.014134acdd84a401f00a.png",
     "static/media/icons.svg": "/twtr-tech-task/static/media/icons.4eca513fca2f55de360ede9f2ba9dfe6.svg",
     "index.html": "/twtr-tech-task/index.html",
     "main.a0acc54f.css.map": "/twtr-tech-task/static/css/main.a0acc54f.css.map",
-    "main.8f8ee457.js.map": "/twtr-tech-task/static/js/main.8f8ee457.js.map"
+    "main.c5e7b203.js.map": "/twtr-tech-task/static/js/main.c5e7b203.js.map",
+    "415.05a0abbe.chunk.js.map": "/twtr-tech-task/static/js/415.05a0abbe.chunk.js.map",
+    "42.20ca9d33.chunk.js.map": "/twtr-tech-task/static/js/42.20ca9d33.chunk.js.map",
+    "384.39d5b8e3.chunk.js.map": "/twtr-tech-task/static/js/384.39d5b8e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a0acc54f.css",
-    "static/js/main.8f8ee457.js"
+    "static/js/main.c5e7b203.js"
   ]
 }
