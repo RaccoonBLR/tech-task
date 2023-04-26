@@ -14,7 +14,7 @@ import {
 } from './UserCard.styled';
 
 export const UserCard = ({ userData, onFollow, onClick }) => {
-  const { user, tweets, followers, avatar, id } = userData;
+  const { user, tweets, followers, id } = userData;
 
   const isFollow = onFollow.some(followId => id === followId);
 
@@ -25,7 +25,7 @@ export const UserCard = ({ userData, onFollow, onClick }) => {
       </Icon>
 
       <BackgroundImage src={cardBg} alt="background"></BackgroundImage>
-      <AvatarImage src={avatar} alt={`${user} avatar`}></AvatarImage>
+      <AvatarImage alt={`${user} avatar`}></AvatarImage>
       <Thumb></Thumb>
 
       <CardUpperText>{tweets} Tweets</CardUpperText>
