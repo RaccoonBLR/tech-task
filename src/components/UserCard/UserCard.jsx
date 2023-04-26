@@ -17,6 +17,10 @@ export const UserCard = ({ userData, onFollow, onClick }) => {
 
   const isFollow = onFollow.some(followId => id === followId);
 
+  const formattedFollowers = followers
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
   return (
     <Card>
       <Icon width="76" height="22">
@@ -28,12 +32,10 @@ export const UserCard = ({ userData, onFollow, onClick }) => {
       <Thumb></Thumb>
 
       <CardUpperText>{tweets} Tweets</CardUpperText>
-      <CardLowerText>{followers} Followers</CardLowerText>
+      <CardLowerText>{formattedFollowers} Followers</CardLowerText>
       <CardButton type="button" id={id} onClick={onClick} isFollow={isFollow}>
         {isFollow ? 'Following' : 'Follow'}
       </CardButton>
     </Card>
   );
 };
-
-/* <AvatarImage src={avatar} alt={`${user} avatar`}></AvatarImage>; */
