@@ -29,6 +29,8 @@ export const Icon = styled.svg`
 
 export const BackgroundImage = styled.img`
   margin-bottom: 88px;
+
+  pointer-events: none;
 `;
 
 export const AvatarImage = styled.img`

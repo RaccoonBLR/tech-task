@@ -32,28 +32,19 @@ export const UserList = ({ users, filter, setUsers }) => {
 
     const isFollow = isFollowed(id);
 
-    if (isFollow) {
-      try {
-        const updatedUser = await updateUserData(id, isFollow);
+    try {
+      const updatedUser = await updateUserData(id, isFollow);
 
-        setOnFollow(prevState => prevState.filter(userId => userId !== id));
-        setUsers(prevState =>
-          prevState.map(user => (user.id === id ? updatedUser : user))
-        );
-      } catch (error) {
-        console.log(error.message);
-      }
-    } else {
-      try {
-        const updatedUser = await updateUserData(id, isFollow);
-
-        setOnFollow(prevState => [...prevState, id]);
-        setUsers(prevState =>
-          prevState.map(user => (user.id === id ? updatedUser : user))
-        );
-      } catch (error) {
-        console.log(error.message);
-      }
+      setOnFollow(prevState =>
+        isFollow
+          ? prevState.filter(userId => userId !== id)
+          : [...prevState, id]
+      );
+      setUsers(prevState =>
+        prevState.map(user => (user.id === id ? updatedUser : user))
+      );
+    } catch (error) {
+      console.log(error.message);
     }
   };
 

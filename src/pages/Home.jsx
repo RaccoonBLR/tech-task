@@ -1,5 +1,7 @@
+import { MainTitle } from 'components/Title/Title';
+
 function Home() {
-  return <h1>Welcome to home page</h1>;
+  return <MainTitle />;
 }
 
 export default Home;

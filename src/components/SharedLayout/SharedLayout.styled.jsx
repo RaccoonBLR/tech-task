@@ -4,7 +4,6 @@ import mainBg from 'images/mainBg.jpg';
 
 export const Header = styled.header`
   padding: 18px 0 18px 50px;
-
   border-bottom: 1px solid lightgray;
 `;
 
