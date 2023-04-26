@@ -39,3 +39,5 @@ export const UserCard = ({ userData, onFollow, onClick }) => {
     </Card>
   );
 };
+
+/* <AvatarImage src={avatar} alt={`${user} avatar`}></AvatarImage>; */
