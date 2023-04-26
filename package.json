@@ -2,7 +2,7 @@
   "name": "tech-practice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://raccoonblr.github.io/tech-task/",
+  "homepage": "https://raccoonblr.github.io/twtr-tech-task/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
