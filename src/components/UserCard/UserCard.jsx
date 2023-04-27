@@ -26,7 +26,12 @@ export const UserCard = ({ userData, onFollow, onClick }) => {
       <BackgroundImage src={cardBg} alt="background"></BackgroundImage>
       <Thumb />
       <FrameThumb />
-      <AvatarImage src={avatar} alt={`${user} avatar`}></AvatarImage>
+      <AvatarImage
+        src={avatar}
+        alt={`${user} avatar`}
+        width="70"
+        height="70"
+      ></AvatarImage>
 
       <CardUpperText>{tweets} Tweets</CardUpperText>
       <CardLowerText>{formattedFollowers} Followers</CardLowerText>

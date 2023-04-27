@@ -34,7 +34,7 @@ export const AvatarImage = styled.img`
   left: 155px;
 
   width: 70px;
-  heigt: 70px;
+  height: 70px;
 
   z-index: 100;
 
