@@ -1,40 +1,9 @@
-# Getting Started with Create React App
+# Start exploring TWTR APP
 
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best
-performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
-
-### Deployment
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project was developed with Create React App. The application implements
+routing and redirection using react-router. Also in the application, you can
+interact with other users using a subscription. For convenient interaction with
+user cards, you have the ability to filter users by subscription status, and the
+load more button allows you to receive user cards in a limited number using
+pagination. Application uses its own custom backend API created with the
+mockapi.io service.
