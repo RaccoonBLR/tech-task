@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import avatarFrame from 'images/avatarFrame.png';
 
 export const Card = styled.article`
   position: relative;
@@ -21,33 +22,24 @@ export const Card = styled.article`
   );
 `;
 
-export const Icon = styled.svg`
-  position: absolute;
-  top: 20px;
-  left: 20px;
-`;
-
 export const BackgroundImage = styled.img`
-  margin-bottom: 88px;
-
   pointer-events: none;
+  margin-bottom: 88px;
 `;
 
 export const AvatarImage = styled.img`
   position: absolute;
-  top: 178px;
-  left: 150px;
 
-  width: 80px;
-  heigt: 80px;
+  top: 185px;
+  left: 155px;
+
+  width: 70px;
+  heigt: 70px;
 
   z-index: 100;
 
   border-radius: 50%;
-  border: 8px solid #ebd8ff;
-  box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
-    inset 0px -2.19582px 4.39163px #ae7be3,
-    inset 0px 4.39163px 3.29372px #fbf8ff;
+  background: url(${avatarFrame});
 `;
 
 export const Thumb = styled.div`
@@ -62,6 +54,17 @@ export const Thumb = styled.div`
   background-color: #ebd8ff;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
     inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
+`;
+export const FrameThumb = styled.div`
+  position: absolute;
+  top: 178px;
+  left: 150px;
+
+  width: 80px;
+  height: 80px;
+  background: url(${avatarFrame});
+  background-position: -5px 0px;
+  z-index: 1000;
 `;
 export const CardUpperText = styled.p`
   font-family: 'Montserrat', sans-serif;

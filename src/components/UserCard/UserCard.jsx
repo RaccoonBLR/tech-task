@@ -1,19 +1,18 @@
 import cardBg from 'images/cardBg.png';
-
-import icons from 'images/icons.svg';
-
+import { Logo } from 'components/Logo/Logo';
 import {
   Card,
-  Icon,
   BackgroundImage,
+  AvatarImage,
   Thumb,
+  FrameThumb,
   CardUpperText,
   CardLowerText,
   CardButton,
 } from './UserCard.styled';
 
 export const UserCard = ({ userData, onFollow, onClick }) => {
-  const { tweets, followers, id } = userData;
+  const { user, tweets, followers, avatar, id } = userData;
 
   const isFollow = onFollow.some(followId => id === followId);
 
@@ -23,13 +22,11 @@ export const UserCard = ({ userData, onFollow, onClick }) => {
 
   return (
     <Card>
-      <Icon width="76" height="22">
-        <use href={`${icons}#icon-logo`} />
-      </Icon>
-
+      <Logo />
       <BackgroundImage src={cardBg} alt="background"></BackgroundImage>
-
-      <Thumb></Thumb>
+      <Thumb />
+      <FrameThumb />
+      <AvatarImage src={avatar} alt={`${user} avatar`}></AvatarImage>
 
       <CardUpperText>{tweets} Tweets</CardUpperText>
       <CardLowerText>{formattedFollowers} Followers</CardLowerText>
@@ -39,5 +36,3 @@ export const UserCard = ({ userData, onFollow, onClick }) => {
     </Card>
   );
 };
-
-/* <AvatarImage src={avatar} alt={`${user} avatar`}></AvatarImage>; */
