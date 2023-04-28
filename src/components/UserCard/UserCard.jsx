@@ -1,11 +1,9 @@
-import cardBg from 'images/cardBg.png';
 import { Logo } from 'components/Logo/Logo';
 import {
   Card,
-  BackgroundImage,
+  CardBackground,
+  AvatarFrame,
   AvatarImage,
-  Thumb,
-  FrameThumb,
   CardUpperText,
   CardLowerText,
   CardButton,
@@ -23,15 +21,16 @@ export const UserCard = ({ userData, onFollow, onClick }) => {
   return (
     <Card>
       <Logo />
-      <BackgroundImage src={cardBg} alt="background"></BackgroundImage>
-      <Thumb />
-      <FrameThumb />
-      <AvatarImage
-        src={avatar}
-        alt={`${user} avatar`}
-        width="70"
-        height="70"
-      ></AvatarImage>
+      <CardBackground />
+
+      <AvatarFrame>
+        <AvatarImage
+          src={avatar}
+          alt={`${user} avatar`}
+          width="80"
+          height="80"
+        ></AvatarImage>
+      </AvatarFrame>
 
       <CardUpperText>{tweets} Tweets</CardUpperText>
       <CardLowerText>{formattedFollowers} Followers</CardLowerText>

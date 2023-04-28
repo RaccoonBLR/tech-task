@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
+  font-family: 'Helvetica Neue', sans-serif;
   margin-top: 92px;
   padding: 116px 74px 100px 94px;
   width: max-content;

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import avatarFrame from 'images/avatarFrame.png';
+import cardBg from 'images/cardBg.png';
 
 export const Card = styled.article`
   position: relative;
-
   text-transform: uppercase;
 
   width: 380px;
@@ -22,52 +21,64 @@ export const Card = styled.article`
   );
 `;
 
-export const BackgroundImage = styled.img`
-  pointer-events: none;
+export const CardBackground = styled.div`
   margin-bottom: 88px;
+  width: 308px;
+  height: 168px;
+
+  background-image: url('${cardBg}');
+  background-size: cover;
 `;
 
-export const AvatarImage = styled.img`
+export const AvatarFrame = styled.div`
   position: absolute;
+  width: 80px;
+  height: 80px;
 
-  top: 185px;
-  left: 155px;
-
-  width: 70px;
-  height: 70px;
-
-  z-index: 100;
-
-  border-radius: 50%;
-  background: url(${avatarFrame});
-`;
-
-export const Thumb = styled.div`
-  width: 100%;
-  height: 8px;
-  position: absolute;
-  top: 214px;
-  left: 0;
-
-  z-index: 10;
-
-  background-color: #ebd8ff;
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
-    inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
-`;
-export const FrameThumb = styled.div`
-  position: absolute;
   top: 178px;
   left: 150px;
 
-  width: 80px;
-  height: 80px;
-  background: url(${avatarFrame});
-  background-position: -5px 0px;
-  z-index: 1000;
+  &::before {
+    content: '';
+    position: absolute;
+
+    width: 380px;
+    height: 8px;
+
+    top: 40px;
+    left: -150px;
+
+    background-color: #ebd8ff;
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+      inset 0px -1.71846px 3.43693px #ae7be3,
+      inset 0px 3.43693px 2.5777px #fbf8ff;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    top: 0;
+    left: 0;
+
+    border-radius: 50%;
+    box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
+      inset 0px -2.19582px 4.39163px #ae7be3,
+      inset 0px 4.39163px 3.29372px #fbf8ff;
+  }
 `;
+
+export const AvatarImage = styled.img`
+  position: relative;
+  border-radius: 50%;
+  border: 8px solid #ebd8ff;
+  background-color: #ebd8ff;
+`;
+
 export const CardUpperText = styled.p`
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -79,21 +90,11 @@ export const CardUpperText = styled.p`
   color: #ebd8ff;
 `;
 
-export const CardLowerText = styled.p`
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-
+export const CardLowerText = styled(CardUpperText)`
   margin-bottom: 26px;
-
-  color: #ebd8ff;
 `;
 
 export const CardButton = styled.button`
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.22;
